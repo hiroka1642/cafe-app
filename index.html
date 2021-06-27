@@ -8,37 +8,16 @@
     <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
-    <div class="googlemap"></div>
+    <div id="map"></div>
     <div class="title"><h1>近くのカフェ</h1></div>
-    <ul class="cafe-lists">
-      <li class="cafe-list">
-        <img src="" alt="" />
-        <div class="cafe-text">
-          <p>CAFE NAME</p>
-          <p>
-            カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。
-          </p>
-        </div>
-      </li>
-      <li class="cafe-list">
-        <img src="" alt="" />
-        <div class="cafe-text">
-          <p>CAFE NAME</p>
-          <p>
-            カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。
-          </p>
-        </div>
-      </li>
-      <li class="cafe-list">
-        <img src="" alt="" />
-        <div class="cafe-text">
-          <p>CAFE NAME</p>
-          <p>
-            カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。カフェの説明。
-          </p>
-        </div>
-      </li>
-    </ul>
+    <ul id="cafe-lists"></ul>
+
     <script src="js/index.js"></script>
+    <script src="infobox.js"></script>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key={MyId}&libraries=places&v=weekly"
+      async
+    ></script>
   </body>
 </html>
