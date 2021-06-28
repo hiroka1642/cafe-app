@@ -99,6 +99,7 @@ const initMap = (pos) => {
       const div = document.createElement("div");
       const cafename = document.createElement("p");
       const cafetext = document.createElement("p");
+      const cafeopen = document.createElement("p");
       img.src = cafelist.results[i].icon;
       img.alt = "";
       img.classList.add("img");
@@ -109,10 +110,19 @@ const initMap = (pos) => {
       button.appendChild(div);
       div.appendChild(cafename);
       div.appendChild(cafetext);
+      div.appendChild(cafeopen);
       cafename.textContent = cafelist.results[i].name;
       cafetext.textContent = cafelist.results[i].vicinity;
+      if (cafelist.results[i].opening_hours === undefined) {
+        cafeopen.textContent = "営業時間は問い合わせてください";
+      } else if (cafelist.results[i].opening_hours.open_now === false) {
+        cafeopen.textContent = "閉まっています";
+      } else {
+        cafeopen.textContent = "空いています！";
+      }
       cafename.classList.add("cafename");
       cafetext.classList.add("cafetext");
+      cafeopen.classList.add("cafetext");
 
       let infowindow = new google.maps.InfoWindow({
         position: cafelist.results[i].geometry.location,
