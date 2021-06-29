@@ -1,5 +1,9 @@
 body {
   margin: 0;
+  padding: 0;
+  background-color: rgb(245, 225, 245);
+  font-family: monospace;
+  color: rgb(105, 83, 56);
 }
 #map {
   width: 500px;
@@ -13,30 +17,43 @@ body {
 
 .img {
   background-color: turquoise;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
 }
 
 .cafe-list {
   margin: 0 auto;
-  width: 500px;
   display: flex;
   flex-direction: row;
-  gap: 10px;
-  padding: 20px;
+  gap: 20px;
+  padding: 10px;
+  align-items: center;
+  background-color: rgb(245, 225, 245);
 }
 
 .cafetext,
 .cafename {
   text-align: left;
 }
+
+.cafename {
+  font-weight: bolder;
+}
+
+.container {
+  width: 300px;
+}
+
 #cafe-lists {
   list-style: none;
   margin: 0 auto;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  height: 450px;
-  overflow:scroll;
+  height: 500px;
+  width: 450px;
+  overflow: scroll;
+  background-color: rgb(245, 225, 245);
 }
 
 button {
@@ -45,5 +62,10 @@ button {
 }
 
 button:hover {
-  background-color: violet;
+  background-color: rgb(255, 255, 255, 0.6);
+}
+
+button:active {
+  background-color: rgb(190, 140, 190);
+  color: azure;
 }

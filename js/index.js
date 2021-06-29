@@ -114,12 +114,13 @@ const initMap = (pos) => {
       cafename.textContent = cafelist.results[i].name;
       cafetext.textContent = cafelist.results[i].vicinity;
       if (cafelist.results[i].opening_hours === undefined) {
-        cafeopen.textContent = "営業時間は問い合わせてください";
+        cafeopen.textContent = "営業時間はお問い合わせください";
       } else if (cafelist.results[i].opening_hours.open_now === false) {
-        cafeopen.textContent = "閉まっています";
+        cafeopen.textContent = "閉店中";
       } else {
-        cafeopen.textContent = "空いています！";
+        cafeopen.textContent = "開店中！";
       }
+      div.classList.add("container");
       cafename.classList.add("cafename");
       cafetext.classList.add("cafetext");
       cafeopen.classList.add("cafetext");
